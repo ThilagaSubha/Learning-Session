@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1</title>
+	<style>
+		body {
+			background-image: url("https://images.pexels.com/photos/355748/pexels-photo-355748.jpeg?cs=srgb&dl=pexels-pixabay-355748.jpg&fm=jpg");
+		}
+		form div {
+			padding: 10px;
+		}
+		form div label {
+			padding: 0px 10px;
+		}
+		form div.radio-group {
+			display: flex;
+			align-items: center;
+		}
+		form div.radio-group label {
+			margin-right: 10px;
+		}
+	</style>
+	<script>
+	
+		function submitForm() {
+					var firstName = document.getElementById("fname").value;
+			var lastName = document.getElementById("lname").value;
+			var course = document.getElementById("course").value;
+			var message = "First Name: " + firstName + "\n";
+			message += "Last Name: " + lastName + "\n";
+			message += "Course: " + course + "\n";
+			alert(message);
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center;">DataSirpi</h1>
+	<h2>Employee Details</h2>
+	<div class="container">
+		<form>
+			<div>
+				<label for="fname">First name:</label>
+				<input type="text" id="fname" name="fname">
+			</div>
+			<div>
+				<label for="lname">Last name:</label>
+				<input type="text" id="lname" name="lname">
+			</div>
+			<div>
+				<label for="course">Choose a Course:</label>
+				<select name="course" id="course">
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="Jquery">jQuery</option>
+					<option value="JavaScript">JavaScript</option>
+				</select>
+			</div>
+			<div class="radio-group">
+				<input type="radio" id="java" name="Course" value="Java">
+				<label for="java">Java</label>
+			</div>
+			<div class="radio-group">
+				<input type="radio" id="HTML" name="Course" value="HTML" checked>
+				<label for="microsoft">HTML</label>
+			</div>
+			<div>
+				<input type="button" value="Submit" onclick="submitForm()">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
