@@ -1,0 +1,40 @@
+Use sruthi;
+CREATE TABLE Newexample (
+    PersonID int,
+    FirstName varchar(255),
+    LastName varchar(255),
+     DOB int,
+    Course varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+Select * from Newexample;
+INSERT INTO Newexample (PersonID, FirstName, LastName, DOB, Course, Address, City)
+VALUES  (01, 'Subha', 'Nayagam', 37, 'JAVA', 'KTC Nagar', 'Tirunelveli');
+Select * from Newexample;
+INSERT INTO Newexample (PersonID, FirstName, LastName, DOB, Course, Address, City)
+VALUES  (02, 'Mohith', 'V', 20, 'JAVA', 'KTC Nagar', 'Tirunelveli'), 
+(03, 'Vasudev', 'V', 22, 'JAVA', 'ANNA nagar', 'Tirunelveli'),
+(04, 'Sweety', 'j', 25, 'HTML', 'Nazareth', 'Tuticorin'),
+(05, 'Jenolin', 'J', 25, 'CSS', 'RR Nagar', 'Tuticorin'),
+(06, 'Valli', 'A', 20, 'JAVA', 'KTC Nagar', 'Tirunelveli'),
+(07, 'Vijay', 'C', 20, 'JAVA', 'T Nagar', 'Tuticorin'),
+(08, 'Ajai', 'M', 22, 'HTML', 'KTC Nagar', 'Tirunelveli'),
+(09, 'Subha', 'T', 20, 'JAVA', 'T Nagar', 'Tuticorin'),
+(10, 'Thilaga', 'S', 21, 'CSS', 'KTC Nagar', 'Tirunelveli');
+Select * from Newexample;
+SELECT (DOB) AS Age,
+  COUNT(*) AS NumberOfPeople
+FROM Newexample
+GROUP BY Age;
+SELECT *
+FROM Newexample
+WHERE City = 'Tuticorin' AND DOB > 22;
+SELECT *
+FROM Newexample
+WHERE DOB BETWEEN 20 AND 25;
+
+   
+   
+  
+
